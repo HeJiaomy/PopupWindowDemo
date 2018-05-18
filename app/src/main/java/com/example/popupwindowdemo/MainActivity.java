@@ -42,9 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         popupWindow.showAsDropDown(et_Input,0,-5);
         popupWindow.setFocusable(true);
         //设置点击外部区域，自动隐藏
-        popupWindow.setOutsideTouchable(true);
+//         popupWindow.setOutsideTouchable(true);
         //设置空的背景
 //        popupWindow.setBackgroundDrawable(new BitmapDrawable());
+        popupWindow.update(); //必须popupWindow.setFocusable(true)和popupWindow.update()同时设置点击外部区域popupWindow才能自动隐藏
     }
 
     private void initListView() {
